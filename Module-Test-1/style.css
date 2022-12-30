@@ -352,6 +352,64 @@ form > .form-control::placeholder{
     }
 }
 
+@media screen and (max-width:615px){
+    .heading-div{
+        height: 15rem;
+        width: auto;
+        padding: 50px 10px 10px 50px;
+    }
+    .heading{
+        font-size: 4rem;
+    }
+    .laptop-image{
+        height: 15rem;
+        width: auto;
+        position: relative;
+        top: 25px;
+        left: 25%;
+    }
+
+
+    .about-img{
+        padding: 10px;
+        height: auto;
+        width: 25rem;
+    }
+    .about-content-div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-heading{
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .about-content-div > .about-content{
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+
+    .services-div > .services-heading{
+        font-size: 2rem;
+        padding: 15px 0 10px 20px ;
+    }
+
+    .services-cards-div{
+        padding: 0;
+        margin: 0;
+    }
+    form > .form-control{
+        width: 450px;
+        margin: 20px auto;
+        background-color: black;
+    }
+}
+
 @media screen and (max-width:425px){
     .heading-div{
         height: 15rem;
@@ -411,64 +469,7 @@ form > .form-control::placeholder{
         margin: 0;
     }
     form > .form-control{
-        width: 350px !important;
-        margin: 20px auto;
-        background-color: black;
-    }
-}
-@media screen and (max-width:615px){
-    .heading-div{
-        height: 15rem;
-        width: auto;
-        padding: 50px 10px 10px 50px;
-    }
-    .heading{
-        font-size: 4rem;
-    }
-    .laptop-image{
-        height: 15rem;
-        width: auto;
-        position: relative;
-        top: 25px;
-        left: 25%;
-    }
-
-
-    .about-img{
-        padding: 10px;
-        height: auto;
-        width: 25rem;
-    }
-    .about-content-div{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-heading{
-        font-size: 2rem;
-        padding: 0;
-    }
-
-    .about-content-div > .about-content{
-        padding: 15px;
-        font-size: 1.2rem;
-    }
-
-
-    .services-div > .services-heading{
-        font-size: 2rem;
-        padding: 15px 0 10px 20px ;
-    }
-
-    .services-cards-div{
-        padding: 0;
-        margin: 0;
-    }
-    form > .form-control{
-        width: 450px;
+        width: 250px !important;
         margin: 20px auto;
         background-color: black;
     }
