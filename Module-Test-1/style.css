@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
 *{
@@ -7,9 +7,9 @@
     font-family: 'Oswald', sans-serif;
 }
 
-/* body{
+body{
     max-width: 100vw;
-} */
+}
 
 h1,h2,h3,h4,h5,h6,p,span{
     margin: 0;
@@ -66,7 +66,7 @@ h1,h2,h3,h4,h5,h6,p,span{
 }
 .heading{
     font-size: 6rem;
-    transform: translateY(-5%);
+    transform: translateY(-10%);
     animation: headingAnimation 1s linear;
 }
 
@@ -217,12 +217,12 @@ form > .form-control::placeholder{
 @keyframes headingAnimation{
     0%{
         opacity: 0;
-        transform: translateY(-3%);
+        transform: translateY(-0%);
     }
   
     100%{
         opacity: 1;
-        transform: translateY(-5%);
+        transform: translateY(-10%);
     }
    
 }
@@ -240,17 +240,8 @@ form > .form-control::placeholder{
 
 /* keyframes laptop image animation */
 
-@keyframes imageHover{
-    0%{
-        transform: translateY(-3%);
-    }
-    100%{
-        transform: translateY(3%);
 
-    }
-}
-
-@media screen and (max-width:1024px){
+@media screen and (max-width:1101px){
     
 
     .heading-div{
@@ -420,7 +411,7 @@ form > .form-control::placeholder{
         margin: 0;
     }
     form > .form-control{
-        width: 150px;
+        width: 350px !important;
         margin: 20px auto;
         background-color: black;
     }
