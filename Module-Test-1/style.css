@@ -198,8 +198,19 @@ form > .form-control::placeholder{
     color: grey;
 }
 
-button{
-    margin: 0 auto;
+
+.on-submit{
+    height: 30px;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.alert{
+    color: white;
+    display: none;
 }
 /* keyframes for heading of content */
 
