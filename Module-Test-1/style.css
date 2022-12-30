@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* body{
+    max-width: 100vw;
+} */
+
+h1,h2,h3,h4,h5,h6,p,span{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    padding: 0;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+.navbar-nav > .nav-item > .nav-link{
+    letter-spacing: 0.2px;
+    font-size: 1.2rem;
+    color: white;
+}
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    background-size: 80%;
+    padding: 0;
+}
+
+
+.navbar-toggler{
+    height: 30px;
+    width: 50px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main -->>> Section-.main */
+
+#main{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border-top: 1px solid rgba(128, 128, 128, 0.26);
+    color: white;
+}
+.heading-image-wrapper{
+    display: flex;
+}
+.heading-div{
+    height: 40rem;
+    width: 60rem;
+   padding: 80px 0 80px 150px;
+}
+.heading{
+    font-size: 6rem;
+    transform: translateY(-5%);
+    animation: headingAnimation 1s linear;
+}
+
+.laptop-image{
+    height: 35rem;
+    width: auto;
+    position: relative;
+    top: 8rem;
+    right: 6rem;
+    
+}
+
+a{
+    text-decoration: none;
+}
+.bi{
+    position: relative;
+    top: 0;
+    right: -48%;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.822);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 60px;
+   width: 40px;
+    border-radius: 100vw 100vw;
+    transition:  200ms linear;
+    transform: translateY(-15%);
+    animation: downAnimation 0.5s infinite alternate ease-out;
+
+}
+
+/* About us section */
+.wrapper{
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+.about-img{
+    height: 30rem;
+    width: auto;
+    padding: 80px 0 0 80px;
+}
+
+.about-content-div{
+    height: auto;
+    width: 38rem;
+}
+.about-heading{
+    padding:50px 0 0 50px;
+    font-size: 6rem;
+    letter-spacing: 0.5px;
+}
+.about-content-div > p {
+    padding: 30px 0 0 50px;
+    font-size: 1.2rem;
+}
+
+/* Our services section */
+
+.services-div{
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+.services-div > .services-heading{
+    padding: 50px 0 50px 80px;
+    font-size: 5rem;
+}
+.services-cards-div{
+    margin: 0 0 0 60px;
+    width: auto;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    
+}
+.card{
+    height: 500px;
+    max-width: 300px !important;
+    margin: 0 20px 0 20px;
+    border: 1px solid black;
+    flex-shrink: 0;
+}
+
+.card:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+.service-card-img{
+    height: auto;
+    width: 250px;
+    margin: 0 auto;
+   
+}
+
+.card-body{
+    background-color: rgba(29, 27, 27, 0.267);
+}
+
+
+.footer{
+    height: 350px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer > .footer-heading{
+    display: inline;
+    margin: 10px 0 0 0 !important;
+}
+
+form > .form-control{
+    width: 600px;
+    margin: 20px auto;
+    background-color: black;
+}
+form > .form-control::placeholder{
+    font-size: 18px;
+}
+
+button{
+    margin: 0 auto;
+}
+/* keyframes for heading of content */
+
+@keyframes headingAnimation{
+    0%{
+        opacity: 0;
+        transform: translateY(-3%);
+    }
+  
+    100%{
+        opacity: 1;
+        transform: translateY(-5%);
+    }
+   
+}
+
+/* keyframes for the arrow button */
+
+@keyframes downAnimation{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-15%);
+    }
+}
+
+/* keyframes laptop image animation */
+
+@keyframes imageHover{
+    0%{
+        transform: translateY(-3%);
+    }
+    100%{
+        transform: translateY(3%);
+
+    }
+}
+
+@media screen and (max-width:1024px){
+    
+
+    .heading-div{
+        height: 20rem;
+        width: auto;
+        padding: 50px 20px 20px 90px;
+    }
+    .heading{
+        font-size: 4rem;
+    }
+    .laptop-image{
+        height: 25rem;
+        width: auto;
+        position: relative;
+        top: 40px;
+        /* left: 20%; */
+    }
+
+
+    .about-img{
+        padding: 50px 0 0 20px;
+        height: 25rem;
+        width: auto;
+    }
+  
+
+    .about-heading{
+        font-size: 3.5rem;
+    }
+
+    .about-content{
+        font-size: 0.8rem;
+    }
+
+
+    .services-div > .services-heading{
+        font-size: 3rem;
+        padding: 30px 0 20px 70px ;
+    }
+
+    form > .form-control{
+        width: 500px;
+        margin: 20px auto;
+        background-color: black;
+    }
+}
+
+@media screen and (max-width:828px){
+    .heading-image-wrapper{
+        display: block;
+    }
+
+    .heading-div{
+        height: 15rem;
+        width: auto;
+        padding: 50px 20px 20px 90px;
+    }
+    .heading{
+        font-size: 4rem;
+    }
+    .laptop-image{
+        height: 25rem;
+        width: auto;
+        position: relative;
+        top: -40px;
+        left: 20%;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .about-img{
+        padding: 10px;
+        height: auto;
+        width: 30rem;
+    }
+    .about-content-div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-heading{
+        font-size: 4rem;
+    }
+
+    .about-content{
+        font-size: 0.8rem;
+    }
+
+
+    .services-div > .services-heading{
+        font-size: 3rem;
+        padding: 30px 0 20px 50px ;
+    }
+
+    form > .form-control{
+        width: 350px;
+        margin: 20px auto;
+        background-color: black;
+    }
+}
+
+@media screen and (max-width:425px){
+    .heading-div{
+        height: 15rem;
+        width: auto;
+        padding: 50px 10px 10px 50px;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .laptop-image{
+        height: 15rem;
+        width: auto;
+        position: relative;
+        top: 25px;
+        left: 15%;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .about-img{
+        padding: 10px;
+        height: auto;
+        width: 15rem;
+    }
+    .about-content-div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-heading{
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .about-content-div > .about-content{
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+
+    .services-div > .services-heading{
+        font-size: 1.5rem;
+        padding: 15px 0 10px 20px ;
+    }
+
+    .services-cards-div{
+        padding: 0;
+        margin: 0;
+    }
+    form > .form-control{
+        width: 150px;
+        margin: 20px auto;
+        background-color: black;
+    }
+}
+@media screen and (max-width:615px){
+    .heading-div{
+        height: 15rem;
+        width: auto;
+        padding: 50px 10px 10px 50px;
+    }
+    .heading{
+        font-size: 4rem;
+    }
+    .laptop-image{
+        height: 15rem;
+        width: auto;
+        position: relative;
+        top: 25px;
+        left: 25%;
+    }
+
+
+    .about-img{
+        padding: 10px;
+        height: auto;
+        width: 25rem;
+    }
+    .about-content-div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-heading{
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .about-content-div > .about-content{
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+
+    .services-div > .services-heading{
+        font-size: 2rem;
+        padding: 15px 0 10px 20px ;
+    }
+
+    .services-cards-div{
+        padding: 0;
+        margin: 0;
+    }
+    form > .form-control{
+        width: 450px;
+        margin: 20px auto;
+        background-color: black;
+    }
+}
