@@ -167,6 +167,7 @@ image3.addEventListener("click" , () => {
                 let diceImageArr = ["images/dice-six-faces-one.png","images/dice-six-faces-two.png","images/dice-six-faces-three.png","images/dice-six-faces-four.png","images/dice-six-faces-five.png","images/dice-six-faces-six.png"]
                 
                 let diceImage = document.createElement('img')
+                diceImage.style.cursor = "pointer"
                 let srcNumber = 0;
                 diceImage.src = diceImageArr[srcNumber]
                 
@@ -213,7 +214,7 @@ image3.addEventListener("click" , () => {
                     diceDisplay.appendChild(numberDisplay)
                     if(clickCount === 3){
                         if(totalNumber > 10){
-                            tryAgain.innerText = "Congratulation You have been allowed to click on the 4th image"
+                            tryAgain.innerText = "Congratulation --> Click on the 4th image"
                             totalButton.innerText = "Move Ahead"
                             totalButton.addEventListener("click" , () => {
                                 body.classList.remove("body_blur")
