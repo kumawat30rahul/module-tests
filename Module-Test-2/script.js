@@ -208,18 +208,18 @@ image3.addEventListener("click" , () => {
                             diceDisplay.appendChild(totalButton)
                         }else{
                             y--;
+                            if (y === 0) {
+                                tryAgain.innerText = "Bad Luck";
+                                totalButton.innerText = "Reload the page";
+                                totalButton.addEventListener("click", () => {
+                                location.reload();
+                            });
+                            diceDisplay.appendChild(tryAgain);
+                            diceDisplay.appendChild(totalButton);
+                          }else{
                             tryAgain.innerText = "Try Again after scoring more than 10"
                             totalButton.innerText = "Try Again"
                             totalButton.addEventListener("click",() => {
-                                if (y === 0) {
-                                        tryAgain.innerText = "Bad Luck";
-                                        totalButton.innerText = "Reload the page";
-                                        totalButton.addEventListener("click", () => {
-                                        location.reload();
-                                    });
-                                    diceDisplay.appendChild(tryAgain);
-                                    diceDisplay.appendChild(totalButton);
-                                  } else {
                                         x = 3;
                                         clickCount = 0;
                                         totalNumber = 0;
@@ -238,67 +238,11 @@ image3.addEventListener("click" , () => {
                                         tryAgain.innerText = ""
     
                                         diceTitle.innerText = "Click the dice " + x + " times";
-    
-    
-    
-                                    // diceImage.addEventListener("click", () => {
-    
-                                        //start
-                                        // if(clickCount < 3){
-                                        //     x--;
-                                        //     if(x>0){
-                                        //         diceTitle.innerText = "Click the dice " + x + " times";
-                                        //     }else{
-                                        //         diceTitle.innerText = "Your Current Chance is Over";
-                                        //     }
-                                        // srcNumber = Math.round(Math.random()*5);
-                                        // diceImage.src = diceImageArr[srcNumber]
-                                        // clickCount++;
-                        
-                                        // diceNumberArr.push(srcNumber+1);
-                                        // if(clickCount < 3){
-                                        //     diceNumberArrDisplay.innerText = " " + diceNumberArr + " +  ";
-                                        // }else{
-                                        //     diceNumberArrDisplay.innerText = " " + diceNumberArr;
-                                        // }
-                                        
-                                        // totalNumber += srcNumber+1
-                                        // total.innerText = "Total: " +totalNumber
-                                        // numberDisplay.appendChild(diceNumberArrDisplay)
-                                        // diceDisplay.appendChild(numberDisplay)
-                                        // if(clickCount === 3){
-                                        //     if(totalNumber > 10){
-                                        //         tryAgain.innerText = "Congratulation You have been allowed to click on the 4th image"
-                                        //         totalButton.innerText = "Move Ahead"
-                                        //         totalButton.addEventListener("click" , () => {
-                                        //             body.classList.remove("body_blur")
-                                        //             image3Clicked = true
-                                        //             modalClick.removeChild(diceDisplay)
-                                        //             modalClick.style.visibility = "hidden"
-                                        //         })
-                                        //         diceDisplay.appendChild(totalButton)
-                                        //     }else{
-                                        //         // y--;
-                                        //         // tryAgain.innerText = "Bad Luck"
-                                        //         // totalButton.innerText = "Reload the page"
-                                        //         // totalButton.addEventListener("click",() => {
-    
-                                        //         //         location.reload();       
-                                        //         // })
-                                        //         // diceDisplay.appendChild(tryAgain);
-                                        //         // diceDisplay.appendChild(totalButton);
-                                        //     }
-                                        // }
-                                        
-                                        // diceDisplay.appendChild(total)
-                                    // }
-                                        // end
-                                    // }
-                                    // );
-                                  }
                             })
                             diceDisplay.appendChild(tryAgain)
                             diceDisplay.appendChild(totalButton)
+                          }
+                            
                         }
                     }
                     
