@@ -21,6 +21,9 @@ let divOfImg4 = document.getElementById('divImg4')
 let d = 0;
 
 
+
+
+
 let modalClick = document.getElementById('modalImgClick')
 
 let userInfo = document.createElement('div')  //------------>>>>>> div for display of name and username
@@ -53,22 +56,30 @@ image1.addEventListener("click",() => {
     
         
         registerButton.addEventListener("click",() => {
-            body.classList.remove("body_blur")
-            image1Clicked = true;
-            if(image1Clicked){
-                nameChange.innerText = "IMAGE 2"
-            }
-            let name = document.getElementById('fullName').value
+            let fullName = document.getElementById('fullName').value
             let email = document.getElementById('emailAddress').value
             let username = document.getElementById('username').value
-    
-            let user = {
-                userName: name,
-                userEmail: email,
-                userUsername: username
+            if(fullName !== "" && email !== "" && username !== "" ){
+                body.classList.remove("body_blur")
+                image1Clicked = true;
+                if(image1Clicked){
+                    nameChange.innerText = "IMAGE 2"
+                }
+                let name = document.getElementById('fullName').value
+                let email = document.getElementById('emailAddress').value
+                let username = document.getElementById('username').value
+        
+                let user = {
+                    userName: name,
+                    userEmail: email,
+                    userUsername: username
+                }
+                userDetail.push(user)
+                modalClick.style.visibility = "hidden"
+            }else{
+                alert("Please fill the details properly")
             }
-            userDetail.push(user)
-            modalClick.style.visibility = "hidden"
+            
     })
         }
         
