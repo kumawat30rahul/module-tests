@@ -192,7 +192,7 @@ image3.addEventListener("click" , () => {
                     numberDisplay.appendChild(diceNumberArrDisplay)
                     diceDisplay.appendChild(numberDisplay)
                     if(clickCount === 3){
-                        if(totalNumber > 90){
+                        if(totalNumber > 10){
                             tryAgain.innerText = "Congratulation You have been allowed to click on the 4th image"
                             totalButton.innerText = "Move Ahead"
                             totalButton.addEventListener("click" , () => {
