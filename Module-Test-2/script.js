@@ -4,21 +4,21 @@ let body = document.getElementById('Wrpper')
 let nameChange = document.getElementById('h1Span')
 
 
-let image1 = document.getElementById('divImg1')
+let image1 = document.getElementById('divImg1')  //=====>>>>>>>>>>>>>>>> accessing the image
 let divOfImg1 = document.getElementById('divImg1')
-let a = 0;
+let a = 0;  //==========================================>>>>>>>>>>>>>> variable to prevent clicking on image twice
 
-let image2 = document.getElementById('divImg2')
+let image2 = document.getElementById('divImg2') //=====>>>>>>>>>>>>>>>> accessing the image
 let divOfImg2 = document.getElementById('divImg2')
-let b = 0;
+let b = 0; //==========================================>>>>>>>>>>>>>> variable to prevent clicking on image twice
 
-let image3 = document.getElementById('divImg3')
+let image3 = document.getElementById('divImg3') //=====>>>>>>>>>>>>>>>> accessing the image
 let divOfImg3 = document.getElementById('divImg3')
-let c = 0;
+let c = 0; //==========================================>>>>>>>>>>>>>> variable to prevent clicking on image twice
 
-let image4 = document.getElementById('divImg4')
+let image4 = document.getElementById('divImg4') //=====>>>>>>>>>>>>>>>> accessing the image
 let divOfImg4 = document.getElementById('divImg4')
-let d = 0;
+let d = 0; //==========================================>>>>>>>>>>>>>> variable to prevent clicking on image twice
 
 
 
@@ -42,7 +42,7 @@ let image4Clicked = false;
 
 let userDetail = []
 
-// image 1 functionailt ------>>>>>>>>>>>>>
+// image 1 functionailt ------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 image1.addEventListener("click",() => {
     
     if(!image2Clicked){
