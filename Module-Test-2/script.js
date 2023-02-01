@@ -126,31 +126,40 @@ image1.addEventListener("click",() => {
 
 //------------image 3 functionality----------//
 
+let secondChance = 2;
 image3.addEventListener("click" , () => {
     if(image2Clicked){
-        // image3Clicked = true;
+        image3Clicked = true;
         if(!image4Clicked){
             
             if(c<1){
                 c++;
+                
                 divOfImg2.classList.remove("selected")
-            divOfImg3.classList.add("selected")
-            body.classList.add("body_blur")
-            modalClick.removeChild(userInfo)
-            modalClick.style.visibility = "visible"
-            let diceTitle = document.createElement('h4')
-            diceTitle.className = "dice_title"
-            let x = 3;
-            diceTitle.innerText = "Click the dice " + x + " times";
-            diceDisplay.appendChild(diceTitle)
-    
-            let diceImageArr = ["images/dice-six-faces-one.png","images/dice-six-faces-two.png","images/dice-six-faces-three.png","images/dice-six-faces-four.png","images/dice-six-faces-five.png","images/dice-six-faces-six.png"]
-            
-            let diceImage = document.createElement('img')
-            let srcNumber = 0;
-            diceImage.src = diceImageArr[srcNumber]
-            
-            let clickCount = 0
+                 divOfImg3.classList.add("selected")
+                body.classList.add("body_blur")
+                if(secondChance === 2){
+                    modalClick.removeChild(userInfo)
+                }
+
+                userInfo.style.display = "none"
+                diceDisplay.innerHTML = ""
+                
+                
+                modalClick.style.visibility = "visible"
+                let diceTitle = document.createElement('h4')
+                diceTitle.className = "dice_title"
+                let x = 3;
+                diceTitle.innerText = "Click the dice " + x + " times";
+                diceDisplay.appendChild(diceTitle)
+        
+                let diceImageArr = ["images/dice-six-faces-one.png","images/dice-six-faces-two.png","images/dice-six-faces-three.png","images/dice-six-faces-four.png","images/dice-six-faces-five.png","images/dice-six-faces-six.png"]
+                
+                let diceImage = document.createElement('img')
+                let srcNumber = 0;
+                diceImage.src = diceImageArr[srcNumber]
+                
+                let clickCount = 0
             
             let numberDisplay = document.createElement('div')
             numberDisplay.className = "number_display"
@@ -208,39 +217,50 @@ image3.addEventListener("click" , () => {
                             diceDisplay.appendChild(totalButton)
                         }else{
                             y--;
-                            if (y === 0) {
+                            if (y === 0 || secondChance === 1) {
                                 tryAgain.innerText = "Bad Luck";
                                 totalButton.innerText = "Reload the page";
                                 totalButton.addEventListener("click", () => {
-                                location.reload();
-                            });
-                            diceDisplay.appendChild(tryAgain);
-                            diceDisplay.appendChild(totalButton);
-                          }else{
-                            tryAgain.innerText = "Try Again after scoring more than 10"
-                            totalButton.innerText = "Try Again"
-                            totalButton.addEventListener("click",() => {
-                                        x = 3;
-                                        clickCount = 0;
-                                        totalNumber = 0;
-                                        diceNumberArr = [];
-                                        srcNumber = 0;
+                                        location.reload();
+                                 });
+                                diceDisplay.appendChild(tryAgain);
+                                diceDisplay.appendChild(totalButton);
+                            }else{
+                                tryAgain.innerText = "Try Again after scoring more than 10"
+                                totalButton.innerText = "Try Again"
+                                totalButton.addEventListener("click",() => {
+
+                                        // x = 3;
+                                        // clickCount = 0;
+                                        // totalNumber = 0;
+                                        // diceNumberArr = [];
+                                        // srcNumber = 0;
     
-                                        diceDisplay.removeChild(totalButton);
+                                        // diceDisplay.removeChild(totalButton);
     
-                                        diceNumberArrDisplay.innerText = ""
-                                        numberDisplay.innerHTML = "";
-                                        tryAgain.innerText = ""
-                                        total.innerText = ""
-                                        numberDisplay.removeChild(diceNumberArrDisplay)
-                                        diceDisplay.removeChild(numberDisplay)
+                                        // diceNumberArrDisplay.innerText = ""
+                                        // numberDisplay.innerHTML = "";
+                                        // tryAgain.innerText = ""
+                                        // total.innerText = ""
+                                        // numberDisplay.removeChild(diceNumberArrDisplay)
+                                        // diceDisplay.removeChild(numberDisplay)
                                         
-                                        tryAgain.innerText = ""
+                                        // tryAgain.innerText = ""
     
-                                        diceTitle.innerText = "Click the dice " + x + " times";
+                                        // diceTitle.innerText = "Click the dice " + x + " times";
+                                        modalClick.style.visibility = "hidden"
+                                        c=0;
+                                        image3Clicked = false
+                                        body.classList.remove("body_blur")
+                                        secondChance--;
+                                        console.log(image2Clicked);
+
+                                        
                             })
                             diceDisplay.appendChild(tryAgain)
                             diceDisplay.appendChild(totalButton)
+                            alert("Try Again after scoring more than 10")
+
                           }
                             
                         }
