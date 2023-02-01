@@ -68,7 +68,7 @@ h1,h2,h3,h4,h5,h6,p,span{
 }
 .heading{
     font-size: 5rem;
-    transform: translateY(-10%);
+    /* transform: translateY(-10%); */
     animation: headingAnimation 1s linear;
 }
 
@@ -219,12 +219,12 @@ form > .form-control::placeholder{
 @keyframes headingAnimation{
     0%{
         opacity: 0;
-        transform: translateY(-0%);
+        transform: translateY(10%);
     }
   
     100%{
         opacity: 1;
-        transform: translateY(-10%);
+        transform: translateY(0%);
     }
    
 }

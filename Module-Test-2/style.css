@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background-color: #1f2c34;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body_blur{
+    filter: blur(5px);
+}
+.clickation{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+}
+
+.h1_span{
+    color: rgb(40, 64, 204);
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.wrapper > div{
+    position: relative;
+    margin: 0 5px 0 5px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid #121b22;
+    background-color: rgba(0, 0, 0, 0.151);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+
+}
+
+.selected{
+    border: 5px solid rgb(40, 64, 204) !important;
+}
+.wrapper>div>img{
+    filter: blur(1px);
+    height: 300px;
+    width: 300px;
+}
+
+.wrapper>div:hover{
+    transform: scale(1.05);
+    transition: 300ms ease-in-out;
+}
+
+.wrapper > div > p {
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    top: 130px;
+    left: 85px;
+    font-weight: bold;
+}
+
+.modal_imgclick{
+    height: 80%;
+    width: 70%;
+    background-color: #162029;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px black;
+    z-index: 3;
+    visibility: hidden;
+}
+
+.cancel_model{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    transition: color 150ms ease-in-out;
+}
+
+.material-symbols-outlined{
+    font-size: 30px;
+    transition: font-size 150ms ease-in-out ,
+                color 150ms ease-in-out;
+    cursor: pointer;
+}
+
+.material-symbols-outlined:hover{
+    font-size: 45px;
+    color: rgb(61, 97, 196);
+    transition: font-size 150ms ease-in-out, 
+                color 150ms ease-in-out;
+}
+
+
+.img1_registration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    width: 70%;
+    z-index: 4;
+}
+
+.img1_registration > h1{
+    margin: 10px;
+}
+
+
+.img1_registration > label{
+    padding: 5px;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.img1_registration > input{
+    padding-left: 20px;
+    height: 50px;
+    width: 70%;
+    background-color: #0d171f;
+    border: 2px solid black;
+}
+.img1_registration > button {
+    height: 50px;
+    padding: 0 15px 0 15px;
+    width: auto;
+    margin-top: 20px;
+    background-color: blueviolet;
+    border: 2px solid #0d171f;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+    border-radius: 100vw 100vw 100vw 100vw;
+}
+
+.img1_registration > button:hover{
+    transform: scale(1.1);
+    background-color: rgb(83, 6, 156);
+    border: 2px solid #091016;
+    transition: 150ms ease-in-out;
+    font-weight: 800;
+}
+
+
+.img2_username{
+    color: black;
+    font-size: 30px;
+    margin: 50px !important;
+}
+
+.dice_image{
+    height: 200px;
+    width: auto;
+}
+
+.dice_title{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.number_display{
+    margin: 20px;
+    padding: 0 10px 0 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    width: auto;
+    background-color: #080d13;
+    color: white;
+}
+
+.total{
+    color: burlywood;
+    font-size: 30px;
+}
+
+.display_coupon{
+    font-size: 50px;
+    color: blue;
+}
